@@ -1,8 +1,10 @@
 ## install requirements
 ## python -m pip install nltk==3.5 joblib==1.0.1 scikit-learn numpy fastapi uvicorn[standard]
 
-## run with
+## run with:
 ## uvicorn main:app --reload
+## or on azure app service:
+## gunicorn -w 2 -k uvicorn.workers.UvicornWorker main:app
 
 import joblib
 from asyncio import Lock
